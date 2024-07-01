@@ -1,7 +1,7 @@
 const express = require("express");
 const { TiktokDownloader } = require("@tobyg74/tiktok-api-dl");
 
-const author = process.env.AUTHOR || "Akuivan13";
+const author = process.env.AUTHOR || "AethersCode";
 const router = express.Router();
 
 router.get("/api/tiktok", (req, res) => {
