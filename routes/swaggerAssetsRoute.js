@@ -10,7 +10,7 @@ const customCss = `
         display: none;
     }
     .swagger-ui .topbar:before {
-        content: "Akuivan13 - Website";
+        content: "AethersCode - Website";
         display: block;
         font-weight: bold;
         color: black;
