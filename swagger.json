@@ -443,178 +443,172 @@
       }
     }
   }
-}
-
-    
-    ,
-    
-    
-    
-    
- "/ronaldo": {
-    "get": {
-      "tags": ["Random"],
-      "summary": "Get a random Ronaldo image",
-      "produces": [
-        "image/jpeg",
-        "image/png",
-        "image/jpg"
-      ],
-      "responses": {
-        "200": {
-          "description": "Successful operation",
-          "content": {
-            "image/jpeg": {
-              "schema": {
-                "type": "string",
-                "format": "binary"
-              }
-            },
-            "image/png": {
-              "schema": {
-                "type": "string",
-                "format": "binary"
-              }
-            },
-            "image/jpg": {
-              "schema": {
-                "type": "string",
-                "format": "binary"
-              }
+},
+"/ronaldo": {
+  "get": {
+    "tags": ["Random"],
+    "summary": "Get a random Ronaldo image",
+    "produces": [
+      "image/jpeg",
+      "image/png",
+      "image/jpg"
+    ],
+    "responses": {
+      "200": {
+        "description": "Successful operation",
+        "content": {
+          "image/jpeg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/png": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/jpg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
             }
           }
         }
       }
     }
-  },
-    "/messi": {
-    "get": {
-      "tags": ["Random"],
-      "summary": "Get a random Messi image",
-      "produces": [
-        "image/jpeg",
-        "image/png",
-        "image/jpg"
-      ],
-      "responses": {
-        "200": {
-          "description": "Successful operation",
-          "content": {
-            "image/jpeg": {
-              "schema": {
-                "type": "string",
-                "format": "binary"
-              }
-            },
-            "image/png": {
-              "schema": {
-                "type": "string",
-                "format": "binary"
-              }
-            },
-            "image/jpg": {
-              "schema": {
-                "type": "string",
-                "format": "binary"
-              }
+  }
+},
+"/messi": {
+  "get": {
+    "tags": ["Random"],
+    "summary": "Get a random Messi image",
+    "produces": [
+      "image/jpeg",
+      "image/png",
+      "image/jpg"
+    ],
+    "responses": {
+      "200": {
+        "description": "Successful operation",
+        "content": {
+          "image/jpeg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/png": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "image/jpg": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
             }
           }
         }
       }
     }
-  },
-    "/api/tiktok": {
-      "get": {
-        "tags": ["Downloader"],
-        "summary": "Unduh Video TikTok",
-        "description": "Endpoint untuk mengunduh video TikTok",
-               "parameters": [
-          {
-            "name": "url",
-            "in": "query",
-            "description": "Url Tiktok Downloader",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
+  }
+},
+"/api/tiktok": {
+  "get": {
+    "tags": ["Downloader"],
+    "summary": "Unduh Video TikTok",
+    "description": "Endpoint untuk mengunduh video TikTok",
+           "parameters": [
+      {
+        "name": "url",
+        "in": "query",
+        "description": "Url Tiktok Downloader",
+        "required": true,
+        "schema": {
+          "type": "string"
         }
       }
-    },
-    "/api/igdl": {
-      "get": {
-        "tags": ["Downloader"],
-        "summary": "Unduh Konten Instagram",
-        "description": "Endpoint untuk mengunduh konten Instagram",
-               "parameters": [
-          {
-            "name": "url",
-            "in": "query",
-            "description": "Url Ig",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  }
+},
+"/api/igdl": {
+  "get": {
+    "tags": ["Downloader"],
+    "summary": "Unduh Konten Instagram",
+    "description": "Endpoint untuk mengunduh konten Instagram",
+           "parameters": [
+      {
+        "name": "url",
+        "in": "query",
+        "description": "Url Ig",
+        "required": true,
+        "schema": {
+          "type": "string"
         }
       }
-    },
-    "/ghstalk": {
-      "get": {
-        "tags": ["Search"],
-        "summary": "Stalk Github User",
-        "description": "Endpoint untuk Github Stalk",
-        "parameters": [
-          {
-            "name": "username",
-            "in": "query",
-            "description": "Nama pengguna GitHub yang ingin dicari",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  }
+},
+"/ghstalk": {
+  "get": {
+    "tags": ["Search"],
+    "summary": "Stalk Github User",
+    "description": "Endpoint untuk Github Stalk",
+    "parameters": [
+      {
+        "name": "username",
+        "in": "query",
+        "description": "Nama pengguna GitHub yang ingin dicari",
+        "required": true,
+        "schema": {
+          "type": "string"
         }
       }
-    },
-        "/ffstalk": {
-      "get": {
-        "tags": ["Search"],
-        "summary": "Stalk Freefire User",
-        "description": "Endpoint untuk Freefire Stalk",
-        "parameters": [
-          {
-            "name": "userid",
-            "in": "query",
-            "description": "Nama pengguna Freefire yang ingin dicari",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  }
+},
+"/ffstalk": {
+  "get": {
+    "tags": ["Search"],
+    "summary": "Stalk Freefire User",
+    "description": "Endpoint untuk Freefire Stalk",
+    "parameters": [
+      {
+        "name": "userid",
+        "in": "query",
+        "description": "Nama pengguna Freefire yang ingin dicari",
+        "required": true,
+        "schema": {
+          "type": "string"
         }
       }
-    },"/cuaca": {
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  }
+},
+"/cuaca": {
   "post": {
     "tags": ["Post"],
     "summary": "Mendapatkan informasi cuaca",
@@ -663,6 +657,61 @@
       },
       "500": {
         "description": "Internal Server Error"
+      }
+    }
+  }
+},
+"/tiktokstalk": {
+  "get": {
+    "tags": ["Search"],
+    "summary": "Stalk Pengguna TikTok",
+    "description": "Endpoint untuk melakukan stalking pengguna TikTok dengan menyediakan nama pengguna sebagai parameter query.",
+    "parameters": [
+      {
+        "name": "username",
+        "in": "query",
+        "description": "Nama pengguna TikTok yang ingin di-stalk",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  }
+},
+"/mobilelegendstalk": {
+  "get": {
+    "tags": ["Search"],
+    "summary": "Stalk Pengguna Mobile Legends",
+    "description": "Endpoint untuk melakukan stalking pengguna Mobile Legends dengan menyediakan ID pengguna dan ID zona sebagai parameter query.",
+    "parameters": [
+      {
+        "name": "user_id",
+        "in": "query",
+        "description": "ID pengguna Mobile Legends yang ingin di-stalk",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "zone_id",
+        "in": "query",
+        "description": "ID zona pengguna Mobile Legends",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
       }
     }
   }
@@ -977,6 +1026,61 @@
             "name": "username",
             "in": "query",
             "description": "Nama pengguna Instagram yang ingin dicari",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ttstalk": {
+      "get": {
+        "tags": ["Search"],
+        "summary": "Stalk Pengguna TikTok",
+        "description": "Endpoint untuk melakukan stalking pengguna TikTok dengan menyediakan nama pengguna sebagai parameter query.",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "description": "Nama pengguna TikTok yang ingin di-stalk",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/mlstalk": {
+      "get": {
+        "tags": ["Search"],
+        "summary": "Stalk Pengguna Mobile Legends",
+        "description": "Endpoint untuk melakukan stalking pengguna Mobile Legends dengan menyediakan ID pengguna dan ID zona sebagai parameter query.",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "query",
+            "description": "User ID Mobile Legends yang ingin di-stalk",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "zone_id",
+            "in": "query",
+            "description": "ID zona pengguna Mobile Legends",
             "required": true,
             "schema": {
               "type": "string"
