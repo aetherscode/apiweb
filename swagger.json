@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "REST API | By AETHERSCODE",
+    "title": "REST API FREE AETHERSCODE",
     "contact": {
       "name": "AethersCode",
       "url": "https://aetherscode.xyz",
@@ -988,12 +988,12 @@
       "get": {
         "tags": ["Search"],
         "summary": "Stalk Pengguna TikTok",
-        "description": "Endpoint untuk melakukan stalking pengguna TikTok dengan menyediakan nama pengguna sebagai parameter query.",
+        "description": "Endpoint untuk melakukan stalking pengguna TikTok dengan menyediakan username sebagai parameter query.",
         "parameters": [
           {
             "name": "username",
             "in": "query",
-            "description": "Nama pengguna TikTok yang ingin di-stalk",
+            "description": "Nama pengguna TikTok yang ingin dicari",
             "required": true,
             "schema": {
               "type": "string"
@@ -1002,23 +1002,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "username": { "type": "string" },
-                    "nama_akun": { "type": "string" },
-                    "foto_profil": { "type": "string" },
-                    "bio": { "type": "string" },
-                    "followers": { "type": "number" },
-                    "following": { "type": "number" },
-                    "likes": { "type": "number" }
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -1029,15 +1013,6 @@
         "summary": "Stalk Pengguna Mobile Legends",
         "description": "Endpoint untuk melakukan stalking pengguna Mobile Legends dengan menyediakan username, User ID, dan Zone ID sebagai parameter query.",
         "parameters": [
-          {
-            "name": "username",
-            "in": "query",
-            "description": "Nama pengguna Mobile Legends yang ingin di-stalk",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "user_id",
             "in": "query",
