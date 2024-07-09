@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "REST API FREE AETHERSCODE",
+    "title": "REST API | By AETHERSCODE",
     "contact": {
       "name": "AethersCode",
       "url": "https://aetherscode.xyz",
@@ -661,29 +661,6 @@
     }
   }
 },
-"/tiktokstalk": {
-  "get": {
-    "tags": ["Search"],
-    "summary": "Stalk Pengguna TikTok",
-    "description": "Endpoint untuk melakukan stalking pengguna TikTok dengan menyediakan nama pengguna sebagai parameter query.",
-    "parameters": [
-      {
-        "name": "username",
-        "in": "query",
-        "description": "Nama pengguna TikTok yang ingin di-stalk",
-        "required": true,
-        "schema": {
-          "type": "string"
-        }
-      }
-    ],
-    "responses": {
-      "200": {
-        "description": "OK"
-      }
-    }
-  }
-},
 "/ytsearch": {
       "get": {
         "tags": ["Search"],
@@ -1025,7 +1002,23 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "username": { "type": "string" },
+                    "nama_akun": { "type": "string" },
+                    "foto_profil": { "type": "string" },
+                    "bio": { "type": "string" },
+                    "followers": { "type": "number" },
+                    "following": { "type": "number" },
+                    "likes": { "type": "number" }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -1034,8 +1027,17 @@
       "get": {
         "tags": ["Search"],
         "summary": "Stalk Pengguna Mobile Legends",
-        "description": "Endpoint untuk melakukan stalking pengguna Mobile Legends dengan menyediakan ID pengguna dan ID zona sebagai parameter query.",
+        "description": "Endpoint untuk melakukan stalking pengguna Mobile Legends dengan menyediakan username, User ID, dan Zone ID sebagai parameter query.",
         "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "description": "Nama pengguna Mobile Legends yang ingin di-stalk",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "name": "user_id",
             "in": "query",
@@ -1048,7 +1050,7 @@
           {
             "name": "zone_id",
             "in": "query",
-            "description": "ID zona pengguna Mobile Legends",
+            "description": "Zone ID pengguna Mobile Legends",
             "required": true,
             "schema": {
               "type": "string"
