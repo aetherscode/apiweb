@@ -684,38 +684,6 @@
     }
   }
 },
-"/mobilelegendstalk": {
-  "get": {
-    "tags": ["Search"],
-    "summary": "Stalk Pengguna Mobile Legends",
-    "description": "Endpoint untuk melakukan stalking pengguna Mobile Legends dengan menyediakan ID pengguna dan ID zona sebagai parameter query.",
-    "parameters": [
-      {
-        "name": "user_id",
-        "in": "query",
-        "description": "ID pengguna Mobile Legends yang ingin di-stalk",
-        "required": true,
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "zone_id",
-        "in": "query",
-        "description": "ID zona pengguna Mobile Legends",
-        "required": true,
-        "schema": {
-          "type": "string"
-        }
-      }
-    ],
-    "responses": {
-      "200": {
-        "description": "OK"
-      }
-    }
-  }
-},
 "/ytsearch": {
       "get": {
         "tags": ["Search"],
