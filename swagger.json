@@ -983,61 +983,6 @@
           }
         }
       }
-    },
-    "/api/ttstalk": {
-      "get": {
-        "tags": ["Search"],
-        "summary": "Stalk Pengguna TikTok",
-        "description": "Endpoint untuk melakukan stalking pengguna TikTok dengan menyediakan username sebagai parameter query.",
-        "parameters": [
-          {
-            "name": "username",
-            "in": "query",
-            "description": "Nama pengguna TikTok yang ingin dicari",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/mlstalk": {
-      "get": {
-        "tags": ["Search"],
-        "summary": "Stalk Pengguna Mobile Legends",
-        "description": "Endpoint untuk melakukan stalking pengguna Mobile Legends dengan menyediakan username, User ID, dan Zone ID sebagai parameter query.",
-        "parameters": [
-          {
-            "name": "user_id",
-            "in": "query",
-            "description": "User ID Mobile Legends yang ingin di-stalk",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "zone_id",
-            "in": "query",
-            "description": "Zone ID pengguna Mobile Legends",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
     }
   }
 }
